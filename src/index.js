@@ -19,6 +19,14 @@ function setOptions(options) {
   init(options);
 }
 
+function setTrayIcon(path){
+  tray.setImage(path);
+}
+
+function getTray(){
+  return tray;
+}
+
 function validation(options) {
   if (typeof options !== "object") {
     console.log("!!!tray-window can not create without any [options]");
@@ -193,4 +201,4 @@ function calculateWindowPosition() {
   return { x: x, y: y };
 }
 
-module.exports = { setOptions, setTray, setWindow, setWindowSize };
+module.exports = { setOptions, setTray, setWindow, setWindowSize, setTrayIcon, getTray };
